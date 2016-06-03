@@ -3,6 +3,10 @@ const Bot  = require('messenger-bot')
 const Client = require("node-rest-client").Client;
 const client = new Client();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb
 let bot = new Bot({
   token: 'EAAMF2ODv0ikBAGkHvcdo08wYRhOuF7PWmbpt6esQ1IZBS7ZAJCD8iJNIPMPddRa1HIURsa3ZByOXxdZCYMVZBkrmzjF0PfknYF6nsSozTNZAJhh2dujbwCh885fIDANGmhOwZCKYyaPja6S6zm3NalqYTwmYkzf3HEdZBIUbg2gpOAZDZD',
   verify: 'bitven_bot',
@@ -27,7 +31,11 @@ bot.on('message', (payload, reply) => {
       case "precio surbitcoin":
         client.get('https://api.blinktrade.com/api/v1/VEF/ticker', function(data, response){
             data = JSON.parse(data);
+<<<<<<< HEAD
             let rate_vef = parseFloat(data.high) + parseFloat(data.low);
+=======
+            var rate_vef = parseFloat(data.high) + parseFloat(data.low);
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb
                 rate_vef = rate_vef / 2;
             if(profile.first_name == "Doriam"){
               bot.sendMessage(payload.sender.id, { "text": "Hola, Mamaguevo! \n Las estadisticas son las siguientes:  \n Precio de compra " + data.buy + "Bs. \n Precio de venta " + data.sell + "Bs. \n Precio Promedio " + rate_vef + "Bs." }, function(err){
@@ -43,7 +51,11 @@ bot.on('message', (payload, reply) => {
       case "precio foxbit":
         client.get('https://api.blinktrade.com/api/v1/BRL/ticker', function(data, response){
             data = JSON.parse(data);
+<<<<<<< HEAD
             let rate_brl = parseFloat(data.high) + parseFloat(data.low);
+=======
+            var rate_brl = parseFloat(data.high) + parseFloat(data.low);
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb
                 rate_brl = rate_brl / 2;
             if(profile.first_name == "Doriam"){
               bot.sendMessage(payload.sender.id, { "text": "Hola, Mamaguevo! \n Las estadisticas son las siguientes:  \n Precio de compra " + data.buy + "R$ \n Precio de venta " + data.sell + "R$ \n Precio Promedio " + rate_brl + "R$" }, function(err){
@@ -58,7 +70,11 @@ bot.on('message', (payload, reply) => {
         break;
       case "precio bitfinex":
         client.get('https://api.bitfinex.com/v1/pubticker/btcusd', function(data, response){
+<<<<<<< HEAD
             let rate_usd = parseFloat(data.high) + parseFloat(data.low);
+=======
+            var rate_usd = parseFloat(data.high) + parseFloat(data.low);
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb
                 rate_usd = rate_usd / 2;
             if(profile.first_name == "Doriam"){
               bot.sendMessage(payload.sender.id, { "text": "Hola, Mamaguevo! \n Las estadisticas son las siguientes:  \n Precio de compra " + data.bid + "$ \n Precio de venta " + data.ask + "$ \n Precio Promedio " + rate_usd + "$" }, function(err){
@@ -108,5 +124,10 @@ bot.on('message', (payload, reply) => {
   reply({ text: 'hey!'}, (err, info) => {})
 })*/
 
+<<<<<<< HEAD
 http.createServer(bot.middleware()).listen(3000)
 console.log('Echo bot server running at port 8080.')
+=======
+http.createServer(bot.middleware()).listen(30000)
+console.log('Echo bot server running at port 30000.')
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb

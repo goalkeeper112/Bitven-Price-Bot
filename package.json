@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "messenger-bot": "^2.3.0",
@@ -18,5 +23,9 @@
   },
   "engines": {
     "node": ">=6.2.1"
+=======
+    "messenger-bot": "^2.3.0",
+    "node-rest-client": "^1.8.0"
+>>>>>>> 2dfbd8daade05b9e41030b2b404ec0fd750334fb
   }
 }
